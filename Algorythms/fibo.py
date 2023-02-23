@@ -7,16 +7,16 @@ def fibo(n):
     return l
 
 
-# def fiboRecursion(n):
-#     if n < 2:
-#         return 1
-#     else:
-#         return fiboRecursion(n-1) + fiboRecursion(n-2)
-#
-# l = []
-# for element in range(8):
-#     l.append(fiboRecursion(element))
-# print(l)
+def fiboRecursion(n):
+    if n < 2:
+        return 1
+    else:
+        return fiboRecursion(n-1) + fiboRecursion(n-2)
+
+l = []
+for element in range(8):
+    l.append(fiboRecursion(element))
+print(l)
 
 
 def fiboRecursionMemoization(n, prevValues=[]):
