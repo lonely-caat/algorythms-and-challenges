@@ -1,5 +1,3 @@
-// Advanced Promises Usage in JavaScript
-
 // 1. Sequential Execution of an Array of Promises
 function executePromisesSequentially(promises) {
     return promises.reduce((promiseChain, currentPromise) => {
