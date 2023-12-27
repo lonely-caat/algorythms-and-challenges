@@ -1,19 +1,17 @@
 a = [6,4,3,8,91,1]
 
 
-// function sortIt(arr){
-//     for (element in arr) {
-//         for (el of arr ) {
-//             if (arr[el] > arr[el + 1]) {
-//                 [arr[el], arr[el + 1]] = [arr[el + 1], arr[el]]
-//             }
-//         }
-//     }
-//         return arr
-//     }
-//
-//
-// console.log(sortIt(a))
+function sortIt(arr){
+     for (element in arr) {
+         for (el of arr ) {
+             if (arr[el] > arr[el + 1]) {
+                 [arr[el], arr[el + 1]] = [arr[el + 1], arr[el]]
+             }
+         }
+     }
+         return arr
+}
+ console.log(sortIt(a))
 
 function bubbleSort(arr) {
     for (let elementsCounter in arr) {
