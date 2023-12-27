@@ -21,10 +21,6 @@ var areas = [];
 
 images.forEach(function(image){let c = image.height*image.width; areas.push(c)})
 
-
-
-
-
 var images = [
     { height: '34px', width: '39px' },
     { height: '54px', width: '19px' },
@@ -34,10 +30,6 @@ var images = [
 var heights;
 
 heights = images.map(function(arr){return arr.height;})
-
-
-
-
 
 var trips = [
     { distance: 34, time: 10 },
@@ -49,30 +41,16 @@ var speeds;
 
 speeds = trips.map(function(arr){return arr.distance/arr.time})
 
-
-
-
-
-
-
 var paints = [ { color: 'red' }, { color: 'blue' }, { color: 'yellow' }];
 function pluck(array, property) {
     return array.map(function(arr){return arr[property]})
-
 }
-
-
-
-
-
 
 var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
 
 var filteredNumbers;
 
 filteredNumbers = numbers.filter(function(nums){return nums>50})
-
-
 
 var users = [
     { id: 1, admin: true },
@@ -86,15 +64,10 @@ var filteredUsers;
 
 filteredUsers = users.filter(function(arr){return arr.admin===true})
 
-
-
-
 var accounts = [
     { balance: -10 },
     { balance: 12 },
     { balance: 0 }
 ];
-
 var account;
-
 account = accounts.find(accounts=>accounts.balance===12)
