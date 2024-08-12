@@ -1,21 +1,20 @@
 const a = [1,6,12,54,58,99,123 ]
 
-function bSearch(arr, bingo){
-    let rightArr = arr.splice(arr.length/2)
-    let leftArr = arr
-
-        if (bingo === leftArr.at(-1)) {
-            console.log('found', bingo, leftArr.at(-1),leftArr)
-
-        } else if (bingo > leftArr.at(-1)) {
-            console.log(leftArr, rightArr)
-            return bSearch(rightArr, bingo)
-        }
-        else if (bingo < leftArr.at(-1)){
-            console.log(leftArr, rightArr)
-            return bSearch(leftArr, bingo)
-        }
+function binarySearch(arr, target, left=0, right=arr.length-1) {
+    if (left>right){
+        return -1
+    }
+    let middle = Math.floor((left+right)/2)
+    if (arr[middle] === target){
+        return middle
+    }
+    if (arr[middle] > target) {
+        return binarySearch(arr,target, left, middle-1)
+    }
+    if (arr[middle] < target){
+        return binarySearch(arr, target, middle+1, right)
+    }
 
 }
 
-bSearch(a, 6)
+binarySearch(a, 6)
